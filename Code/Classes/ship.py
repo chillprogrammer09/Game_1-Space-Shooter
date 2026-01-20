@@ -20,7 +20,7 @@ class Ship(pygame.sprite.Sprite):
 
         self.health = 3
         self.invulenerable_time = 0
-        self.invulenerable_duration = 2000
+        self.invulenerable_duration = 1250
         self.laser_class = laser_class
 
     def shoot_laser(self):
@@ -60,7 +60,7 @@ class Ship(pygame.sprite.Sprite):
         if self.invulenerable_time > 0:
             current_time = pygame.time.get_ticks()
             return (
-                current_time - self.invulenerable_duration < self.invulenerable_duration
+                current_time - self.invulenerable_time < self.invulenerable_duration
             )
         return False
 

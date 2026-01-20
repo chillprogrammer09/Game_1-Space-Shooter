@@ -1,12 +1,16 @@
 import random
 import sys
-
+import os
 import pygame
+
 from Classes.enemy import Enemy, EnemyLaser
 from Classes.explosion import Explosion
 from Classes.laser import Laser
 from Classes.ship import Ship
 from constant import *
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(BASE_DIR)
 
 # Game state
 is_alive = True
